@@ -1,0 +1,17 @@
+D:\Data\Documents\.NET\SWD_Project\DataAccess\bin\Debug\net6.0\appsettings.json
+D:\Data\Documents\.NET\SWD_Project\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\Data\Documents\.NET\SWD_Project\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\Data\Documents\.NET\SWD_Project\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\Data\Documents\.NET\SWD_Project\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+D:\Data\Documents\.NET\SWD_Project\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.sourcelink.json
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\Data\Documents\.NET\SWD_Project\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

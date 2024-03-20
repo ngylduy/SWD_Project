@@ -69,6 +69,16 @@ namespace BusinessObject.Models
                     .HasColumnName("Service_Id")
                     .IsFixedLength();
 
+                entity.Property(e => e.StaffId)
+                    .HasMaxLength(10)
+                    .HasColumnName("Staff_Id")
+                    .IsFixedLength();
+
+                entity.HasOne(d => d.Clinic)
+                    .WithMany(p => p.Appointments)
+                    .HasForeignKey(d => d.ClinicId)
+                    .HasConstraintName("FK_Appointment_Clinic");
+
                 entity.HasOne(d => d.Doctor)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.DoctorId)
@@ -83,6 +93,11 @@ namespace BusinessObject.Models
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.ServiceId)
                     .HasConstraintName("FK_Appointment_Services");
+
+                entity.HasOne(d => d.Staff)
+                    .WithMany(p => p.Appointments)
+                    .HasForeignKey(d => d.StaffId)
+                    .HasConstraintName("FK_Appointment_Staff");
             });
 
             modelBuilder.Entity<Clinic>(entity =>
@@ -112,6 +127,10 @@ namespace BusinessObject.Models
                     .IsFixedLength();
 
                 entity.Property(e => e.DoctorName).HasColumnName("Doctor_Name");
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PhoneNumber).HasColumnName("Phone_Number");
 
@@ -168,6 +187,10 @@ namespace BusinessObject.Models
                     .IsFixedLength();
 
                 entity.Property(e => e.DateOfBirth).HasColumnType("date");
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PatientName).HasColumnName("Patient_Name");
 
@@ -254,6 +277,10 @@ namespace BusinessObject.Models
                     .HasMaxLength(10)
                     .HasColumnName("Clinic_Id")
                     .IsFixedLength();
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PhoneNumber).HasColumnName("Phone_Number");
 

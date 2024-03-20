@@ -5,9 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClinicManagement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="362" Width="800">
     <Grid>
-        <Label Content="Login" HorizontalAlignment="Left" Margin="346,154,0,0" VerticalAlignment="Top" Width="133" HorizontalAlignment="Center"/>
+        <StackPanel Background="White" Orientation ="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="434">
+            <Label x:Name="lbTitle" Foreground="Black" FontWeight="Bold" FontSize="20" Content="Login Screen" HorizontalAlignment="Center"/>
 
+            <Label x:Name="lbPhone" Content="Phone" Margin="0 10 0 0" FontWeight="Bold" Width="300"/>
+            <TextBox x:Name="txtPhone" Margin="0 0 0 0" HorizontalAlignment="Stretch" Width="300" Padding="0 3"/>
+
+            <Label x:Name="lbPassword" Content="Password" Margin="0 0 0 0" FontWeight="Bold" Width="300"/>
+            <PasswordBox x:Name="txtPassword" HorizontalAlignment="Stretch" Margin="0 0 0 0"   Width="300" Padding="0 3"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnLogin" Margin="10" Width="80" Cursor="Hand" Content="Login" IsDefault="True" Click="btnLogin_Click" Padding="0 3"/>
+                <Button x:Name="btnRegister" Margin="10" Width="80" Cursor="Hand" Content="Register" IsDefault="True" Padding="0 3" Click="btnRegister_Click"/>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Window>

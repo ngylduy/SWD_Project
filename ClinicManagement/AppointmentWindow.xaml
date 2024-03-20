@@ -1,0 +1,58 @@
+﻿<Window x:Class="ClinicManagement.AppointmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClinicManagement"
+        mc:Ignorable="d"
+        Title="Appointment" Height="630" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Top" Margin="10,10,10,0" Height="187">
+
+            <Label Content="Service" Name="LbService" Width="400" Height="25"/>
+            <ComboBox Name="CboService"
+                          SelectedValue="{Binding ServiceId, Mode=OneWay}"
+                          DataContext="{Binding SelectedItem,ElementName=lvAppoinment}"
+                          DisplayMemberPath="ServiceName"
+                          SelectedValuePath="ServiceId"
+                          Width="400" Padding="5px"/>
+
+            <Label Name="LbDate" Content="Date" Width="400" Height="25"/>
+            <DatePicker Name="TxtDate" Width="400"
+                            Text="{Binding AppointmentDate}"
+                            DataContext="{Binding SelectedItem,ElementName=lvAppoinment}"
+                            Padding="5px"/>
+            
+            <StackPanel Orientation="Horizontal" Margin="15" HorizontalAlignment="Center">
+                <Button x:Name="BtnCreateAppoinment" Width="118" Margin="10" Content="Create Appoinment" Height="30" Click="BtnCreateAppoinment_Click"/>
+                <Button x:Name="BtnUpdateAppoinment" Width="118" Margin="10" Content="Update Appoinment" Height="30" Click="BtnUpdateAppoinment_Click"/>
+                <Button x:Name="BtnCancelAppoinment" Width="118" Margin="10" Content="Cancel Appoinment" Height="30" Click="BtnCancelAppoinment_Click"/>
+            </StackPanel>
+            
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Margin="10,205,10,0" Height="399" RenderTransformOrigin="0.5,0.5">
+            <ListView Name="lvAppoinment" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Appointment ID" Width="101" 
+                                        DisplayMemberBinding="{Binding AppointmentId}" />
+                        
+                        <GridViewColumn Header="Appointment Date" Width="101" 
+                                        DisplayMemberBinding="{Binding AppointmentDate, StringFormat='dd/MM/yyyy'}" />
+                        <GridViewColumn Header="Clinic" Width="101" 
+                                        DisplayMemberBinding="{Binding Clinic.ClinicName}" />
+                        <GridViewColumn Header="Service" Width="101" 
+                                        DisplayMemberBinding="{Binding Service.ServiceName}" />
+                        <GridViewColumn Header="Doctor" Width="101"
+                                        DisplayMemberBinding="{Binding Doctor.DoctorName}" />
+                        <GridViewColumn Header="Staff" Width="101" 
+                                        DisplayMemberBinding="{Binding Staff.StaffName}" />
+                        <GridViewColumn Header="Status" Width="101" 
+                                        DisplayMemberBinding="{Binding Status}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

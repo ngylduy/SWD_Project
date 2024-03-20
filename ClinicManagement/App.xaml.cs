@@ -1,4 +1,6 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Repository;
+using DataAccess.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +32,16 @@ public partial class App : Application
 
 
         services.AddSingleton<MainWindow>();
+        services.AddSingleton<ILoginRepository, LoginRepository>();
+        services.AddSingleton<IAppointmentRepository, AppointmentRepository>();
+        services.AddSingleton<IStaffRepository, StaffRepository>();
+        services.AddSingleton<IPatientRepository, PatientRepository>();
+
+        services.AddSingleton<IDoctorRepository, DoctorRepository>();
+
+        services.AddSingleton<IClinicRepository, ClinicRepository>();
+
+        services.AddSingleton<IServiceRepository, ServiceRepository>();
 
     }
 

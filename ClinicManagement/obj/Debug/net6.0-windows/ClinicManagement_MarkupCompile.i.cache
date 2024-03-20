@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Data\Documents\.NET\SWD_Project\ClinicManagement\App.xaml
-11407045341
+41678516970
 
-62042715395
+91037275416
 227405922649
-MainWindow.xaml;
+AppointmentWindow.xaml;MainWindow.xaml;Register.xaml;StaffWindow.xaml;
 
-False
+True
 

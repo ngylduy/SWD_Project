@@ -16,6 +16,7 @@ namespace BusinessObject.Models
         public string? PhoneNumber { get; set; }
         public bool? Gender { get; set; }
         public string? ClinicId { get; set; }
+        public string? Password { get; set; }
 
         public virtual Clinic? Clinic { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }
